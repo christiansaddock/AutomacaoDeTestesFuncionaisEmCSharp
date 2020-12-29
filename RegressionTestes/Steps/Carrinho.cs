@@ -19,6 +19,7 @@ namespace ATDD.Steps
             DriverVitrine.DadoABuscaDoItem("Blouse");
             DriverVitrine.QuandoSelecionarOItem("Blouse");
             DriverStepsAction.QuandoClicarNoBotao("add_to_cart");
+            DriverStepsAction.QuandoClicarNoBotao("add_to_cart");
             DriverStepsAction.QuandoClicarNoBotao("Continue shopping");
         }
 
@@ -28,7 +29,5 @@ namespace ATDD.Steps
             DriverVitrine.QuandoClicarNoCarrinho();
             DriverCheckout.EntaoOValorTotalDaCompraDeveSer("$29.00");
         }
-
-
     }
 }

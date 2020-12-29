@@ -33,7 +33,7 @@ namespace SeleniumDriver.PageObjects
 
         public static void QuandoClicarNoCarrinho()
         {
-            _driver.FindElement(By.ClassName("shopping_cart")).Click();
+            _driver.FindElement(By.ClassName("shopping_cart")).FindElement(By.TagName("a")).Click();
             Utils.DriverUtils.WaitPageLoaded();
         }
 

@@ -8,6 +8,7 @@ namespace SeleniumDriver.PageObjects
     public static class DriverCheckout
     {
         public static IWebDriver _driver = DriverStepsFactory.driver;
+        static IWebElement _element;
 
         public static void DadoQueAceitoOsTermosDeServico()
         {
@@ -16,9 +17,25 @@ namespace SeleniumDriver.PageObjects
 
         public static void EntaoOValorTotalDaCompraDeveSer(string valor)
         {
-            string valorTela = _driver.FindElement(By.Id("total_price")).Text;
+            Utils.DriverUtils.WaitPageLoaded();
 
-            Assert.AreEqual(valor, valorTela);
+            try
+            {
+                _element = _driver.FindElement(By.Id("total_price"));
+            }
+            catch
+            {
+                try
+                {
+                    _element = _driver.FindElement(By.Id("our_price_display"));
+                }
+                catch
+                {
+                    throw new NullReferenceException("elemento não encontrado");
+                }
+            }
+
+            Assert.AreEqual(valor, _element.Text);
         }
     }
 }

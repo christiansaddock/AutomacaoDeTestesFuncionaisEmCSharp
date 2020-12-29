@@ -1,8 +1,6 @@
 ﻿using OpenQA.Selenium;
 using SeleniumDriver.Utils;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 
 namespace SeleniumDriver.Basics
@@ -46,12 +44,11 @@ namespace SeleniumDriver.Basics
                 }
                 catch
                 {
-                    Thread.Sleep(100);
+                    DriverUtils.WaitPageLoaded();
                 }
             }
             throw new NullReferenceException("elemento não encontrado");
         }
-               
 
         private static void clearElement(IWebElement el)
         {
