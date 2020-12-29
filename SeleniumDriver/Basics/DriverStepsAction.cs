@@ -5,7 +5,7 @@ namespace SeleniumDriver.Basics
 {
     public static class DriverStepsAction
     {
-        private static IWebDriver _driver = DriverStepsFactory.driver;
+        public static IWebDriver _driver = DriverStepsFactory.driver;
 
         public static void QuandoClicarNoBotao(string botao)
         {
@@ -48,14 +48,15 @@ namespace SeleniumDriver.Basics
             }
             throw new NullReferenceException(botao + " não encontrado");
         }
+
         public static void QuandoClicarNoCheckbox(string checkbox)
         {
             for (int i = 0; i < 10; i++)
             {
                 foreach (IWebElement el in _driver.FindElements(By.ClassName("checkbox")))
-                    if (el.Text == checkbox)
+                    if (el.Text.Contains(checkbox))
                     {
-                        el.Click();
+                        el.FindElement(By.ClassName("checker")).Click();
                         return;
                     }
             }

@@ -1,5 +1,6 @@
 ﻿using SeleniumDriver.Basics;
 using SeleniumDriver.PageObjects;
+using SeleniumDriver.Utils;
 using TechTalk.SpecFlow;
 
 namespace ATDD.Steps
@@ -7,32 +8,31 @@ namespace ATDD.Steps
     [Binding]
     public sealed class CadastroDeConta
     {
-        [Given(@"que o cliente escolhe um ou mais produtos")]
-        public void DadoQueOClienteEscolheUmOuMaisProdutos()
+        [Given(@"a tela de cadastro de conta")]
+        public void DadoATelaDeCadastroDeConta()
         {
-            //DriverVitrine.DadoABuscaDoItem("Blouse");
-            //DriverVitrine.QuandoSelecionarOItem("Blouse");
-            //DriverStepsAction.QuandoClicarNoBotao("add_to_cart"); 
-            //DriverStepsAction.QuandoClicarNoBotao("Continue shopping");
-
-            //DriverVitrine.DadoABuscaDoItem("Faded Short Sleeve T-shirts");
-            //DriverVitrine.QuandoSelecionarOItem("Faded Short Sleeve T-shirts");
-            //DriverStepsAction.QuandoClicarNoBotao("add_to_cart");
-            //DriverStepsAction.QuandoClicarNoBotao("Proceed to checkout");
+            DriverStepsNavigate.DadoAurl("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+            DriverUtils.WaitPageLoaded();
+            DriverStepsValue.DadoOValorParaOcampo("email_create", "test2912@a.com");
+            DriverStepsAction.QuandoClicarNoBotao("SubmitCreate");
         }
 
-        [When(@"o cliente fechar o pedido")]
-        public void QuandoOClienteFecharOPedido()
+        [When(@"cliente informar seus dados de cadastro")]
+        public void QuandoClienteInformarSeusDadosDeCadastro()
         {
-            //DriverStepsAction.QuandoClicarNoBotao("Proceed to checkout");
-            //DriverStepsValue.DadoOValorParaOcampo("authentication","test2912@a.com");
-            //DriverCreatAccount.DadoACriacaoDeConta();
+            DriverCreatAccount.DadoACriacaoDeConta();
+            DriverUtils.WaitPageLoaded();
         }
 
-        [Then(@"deve ser efetivada a compra")]
-        public void EntaoDeveSerEfetivadaACompra()
+        [Then(@"o endereço deve ser cadastrado corretamente")]
+        public void EntaoOEnderecoDeveSerCadastradoCorretamente()
         {
-            //DriverStepsAction.QuandoClicarNoBotao("add_to_cart");
+            DriverStepsNavigate.DadoAurl("http://automationpractice.com/index.php?controller=addresses");
+            DriverCreatAccount.EntaoOEnderecoCadastradoDeveSer("address_address1", "Rua marechal, 1");
+            DriverCreatAccount.EntaoOEnderecoCadastradoDeveSer("address_address2", "ap 1800");
+            DriverCreatAccount.EntaoOEnderecoCadastradoDeveSer("address_company", "nome empresa A");
+            DriverCreatAccount.EntaoOEnderecoCadastradoDeveSer("address_phone", "4133334444");
+            DriverCreatAccount.EntaoOEnderecoCadastradoDeveSer("address_phone_mobile", "41999944444");
         }
 
     }

@@ -7,7 +7,7 @@ namespace SeleniumDriver.PageObjects
 {
     public static class DriverVitrine
     {
-        private static IWebDriver _driver = DriverStepsFactory.driver;
+        public static IWebDriver _driver = DriverStepsFactory.driver;
 
         public static void DadoABuscaDoItem(string item)
         {
@@ -29,6 +29,12 @@ namespace SeleniumDriver.PageObjects
                 {
                     throw new NullReferenceException(item + " não encontrado");
                 }
+        }
+
+        public static void QuandoClicarNoCarrinho()
+        {
+            _driver.FindElement(By.ClassName("shopping_cart")).Click();
+            Utils.DriverUtils.WaitPageLoaded();
         }
 
     }

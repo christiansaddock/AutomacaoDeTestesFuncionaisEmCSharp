@@ -9,7 +9,7 @@ namespace SeleniumDriver.Basics
 {
     public static class DriverStepsValue
     {
-        private static IWebDriver _driver = DriverStepsFactory.driver;
+        public static IWebDriver _driver = DriverStepsFactory.driver;
         static IWebElement _element;
 
         public static void DadoOValorParaOcampo(string campo, string valor, bool enter = false)

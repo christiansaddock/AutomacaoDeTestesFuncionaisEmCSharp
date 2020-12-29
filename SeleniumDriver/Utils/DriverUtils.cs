@@ -1,12 +1,13 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Threading;
 
 namespace SeleniumDriver.Utils
 {
     public static class DriverUtils
     {
-        private static IWebDriver _driver = DriverStepsFactory.driver;
+        public static IWebDriver _driver = DriverStepsFactory.driver;
 
         public static void WaitElement(IWebElement element)
         {
@@ -27,8 +28,9 @@ namespace SeleniumDriver.Utils
 
         public static void WaitPageLoaded()
         {
+            Thread.Sleep(250);
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            WebDriverWait wait = new WebDriverWait(_driver, new TimeSpan(0, 0, 15));
+            WebDriverWait wait = new WebDriverWait(_driver, new TimeSpan(0, 0, 10));
             wait.Until(wd => js.ExecuteScript("return document.readyState").ToString() == "complete");
         }
 

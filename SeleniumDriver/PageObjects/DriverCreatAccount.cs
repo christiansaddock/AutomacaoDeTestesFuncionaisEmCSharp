@@ -1,10 +1,14 @@
-﻿using SeleniumDriver.Basics;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using SeleniumDriver.Basics;
 using SeleniumDriver.Utils;
 
 namespace SeleniumDriver.PageObjects
 {
     public static class DriverCreatAccount
     {
+        public static IWebDriver _driver = DriverStepsFactory.driver;
+
         public static void DadoACriacaoDeConta()
         {
             DriverUtils.WaitPageLoaded();
@@ -29,6 +33,13 @@ namespace SeleniumDriver.PageObjects
             DriverStepsValue.DadoASelecaoDoValorParaOcampo("phone_mobile", "41999944444");
 
             DriverStepsAction.QuandoClicarNoBotao("Register");
+        }
+
+        public static void EntaoOEnderecoCadastradoDeveSer(string campo, string valor)
+        {
+            string valorTela = _driver.FindElement(By.ClassName(campo)).Text;
+
+            Assert.AreEqual(valor, valorTela);
         }
     }
 }

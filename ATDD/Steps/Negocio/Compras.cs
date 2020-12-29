@@ -39,7 +39,6 @@ namespace ATDD.Steps
         [Then(@"deve ser efetivada a compra")]
         public void EntaoDeveSerEfetivadaACompra()
         {            
-            DriverStepsAction.QuandoClicarNoBotao("add_to_cart");
             DriverUtils.WaitPageLoaded();
             DriverCheckout.EntaoOValorTotalDaCompraDeveSer("$45.51");
         }

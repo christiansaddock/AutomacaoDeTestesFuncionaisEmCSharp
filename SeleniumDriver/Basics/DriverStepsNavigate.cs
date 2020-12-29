@@ -5,7 +5,7 @@ namespace SeleniumDriver.Basics
 {
     public static class DriverStepsNavigate
     {
-        private static IWebDriver _driver = DriverStepsFactory.driver;
+        public static IWebDriver _driver = DriverStepsFactory.driver;
 
         public static void DadoAurl(string URL)
         {
@@ -16,7 +16,7 @@ namespace SeleniumDriver.Basics
             catch
             {
                 _driver.Url = URL;
-            }            
+            }
         }
     }
 }

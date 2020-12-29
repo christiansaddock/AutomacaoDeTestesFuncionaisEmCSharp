@@ -7,7 +7,7 @@ namespace SeleniumDriver.PageObjects
 {
     public static class DriverCheckout
     {
-        private static IWebDriver _driver = DriverStepsFactory.driver;
+        public static IWebDriver _driver = DriverStepsFactory.driver;
 
         public static void DadoQueAceitoOsTermosDeServico()
         {
