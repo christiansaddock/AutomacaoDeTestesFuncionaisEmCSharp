@@ -1,0 +1,11 @@
+C:\Users\ChristianSaddock-FRE\Estudos\AutomacaoDeTestesFuncionaisEmCSharp\SeleniumDriver\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ChristianSaddock-FRE\Estudos\AutomacaoDeTestesFuncionaisEmCSharp\SeleniumDriver\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ChristianSaddock-FRE\Estudos\AutomacaoDeTestesFuncionaisEmCSharp\SeleniumDriver\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ChristianSaddock-FRE\Estudos\AutomacaoDeTestesFuncionaisEmCSharp\SeleniumDriver\bin\Debug\netcoreapp2.2\SeleniumDriver.deps.json
+C:\Users\ChristianSaddock-FRE\Estudos\AutomacaoDeTestesFuncionaisEmCSharp\SeleniumDriver\bin\Debug\netcoreapp2.2\SeleniumDriver.dll
+C:\Users\ChristianSaddock-FRE\Estudos\AutomacaoDeTestesFuncionaisEmCSharp\SeleniumDriver\bin\Debug\netcoreapp2.2\SeleniumDriver.pdb
+C:\Users\ChristianSaddock-FRE\Estudos\AutomacaoDeTestesFuncionaisEmCSharp\SeleniumDriver\obj\Debug\netcoreapp2.2\SeleniumDriver.csproj.CoreCompileInputs.cache
+C:\Users\ChristianSaddock-FRE\Estudos\AutomacaoDeTestesFuncionaisEmCSharp\SeleniumDriver\obj\Debug\netcoreapp2.2\SeleniumDriver.AssemblyInfoInputs.cache
+C:\Users\ChristianSaddock-FRE\Estudos\AutomacaoDeTestesFuncionaisEmCSharp\SeleniumDriver\obj\Debug\netcoreapp2.2\SeleniumDriver.AssemblyInfo.cs
+C:\Users\ChristianSaddock-FRE\Estudos\AutomacaoDeTestesFuncionaisEmCSharp\SeleniumDriver\obj\Debug\netcoreapp2.2\SeleniumDriver.dll
+C:\Users\ChristianSaddock-FRE\Estudos\AutomacaoDeTestesFuncionaisEmCSharp\SeleniumDriver\obj\Debug\netcoreapp2.2\SeleniumDriver.pdb
