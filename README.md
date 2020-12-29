@@ -1,4 +1,4 @@
-# AutomacaoDeTestesFuncionaisEmCSharp
+# Automacao De TestesFuncionaisEmCSharp
  ATDD + Regression + Selenium WebDriver
 
 ## Christian Saddock de Sá
